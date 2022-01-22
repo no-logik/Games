@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TIC ~ TAC ~ TOE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Licorice&family=Noto+Sans:wght@600&display=swap" rel="stylesheet"> 
+        <style>
+            body{
+                background-color: #000;
+                font-family: 'Licorice', cursive;
+            }
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .container-fluid{
+                margin-top: 50px;
+                width: 1200px;
+                height: 700px;
+                background-color: #F6E71D;
+            }
+            .box{
+                width: 90%;
+                height: 70%;
+                border: #000 2px solid;
+                margin-top: 40px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .indicator{
+                width: 100px;
+                height: 100px;
+                border: #000 solid 2px;
+                font-size: 4rem;
+                color: #F6E71D;
+                text-align: center;
+                font-family: 'Noto Sans', sans-serif;
+            }
+            .bg-black{
+                background-color: #000;
+            }
+            .tct-box{
+                height: 300px;
+                width: 300px;
+                border: #000 2px solid;
+            }
+            table{
+                width: 100%;
+                height: 100%;
+            }
+            td{
+                width: 98.4px;
+                height: 98.4px;
+                font-size: 4rem;
+                vertical-align: middle;
+                font-family: 'Noto Sans', sans-serif;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1 class="text-center pt-4"><strong>TIC ~ TAC ~ TOE</strong></h1>
+            <div class="box container">
+                <div class="indicator left bg-black">
+                    O
+                </div>
+                <div class="tct-box">
+                    <table>
+                        <tr>
+                            <td class="text-center border border-dark border-2 one four seven" onclick="addSymbol(event)"></td>
+                            <td class="text-center border border-dark border-2 one five" onclick="addSymbol(event)"></td>
+                            <td class="text-center border border-dark border-2 one six eight" onclick="addSymbol(event)"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center border border-dark border-2 two four" onclick="addSymbol(event)"></td>
+                            <td class="text-center border border-dark border-2 two five seven eight" onclick="addSymbol(event)"></td>
+                            <td class="text-center border border-dark border-2 two six" onclick="addSymbol(event)"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center border border-dark border-2 three four eight" onclick="addSymbol(event)"></td>
+                            <td class="text-center border border-dark border-2 three five" onclick="addSymbol(event)"></td>
+                            <td class="text-center border border-dark border-2 three six seven" onclick="addSymbol(event)"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="indicator right">
+                    X
+                </div>
+            </div>
+        </div>
+        <script>
+            let bgIndicator = true;
+
+            const one = document.querySelectorAll('.one');
+            const two = document.querySelectorAll('.two');
+            const three = document.querySelectorAll('.three');
+            const four = document.querySelectorAll('.four');
+            const five = document.querySelectorAll('.five');
+            const six = document.querySelectorAll('.six');
+            const seven = document.querySelectorAll('.seven');
+            const eight = document.querySelectorAll('.eight');
+
+            const arrayOfPossibilities = [one, two, three, four, five, six, seven, eight];
+            function checkWinner (){
+                arrayOfPossibilities.forEach((Element, index) => {
+                    if((Element[0].innerHTML === Element[1].innerHTML && Element[0].innerHTML === Element[2].innerHTML) && !(Element[0].innerHTML === "")){
+                        alert(`${Element[0].innerHTML} won the match`);
+                    }
+                })
+            }
+            
+
+            function addSymbol (event){
+                if(bgIndicator){
+                    event.target.innerHTML = 'O';
+                    document.querySelector('.left').classList.remove('bg-black');
+                    document.querySelector('.right').classList.add('bg-black');
+                    bgIndicator = false;
+                    
+                }else{
+                    event.target.innerHTML = 'X';
+                    document.querySelector('.left').classList.add('bg-black');
+                    document.querySelector('.right').classList.remove('bg-black');
+                    bgIndicator = true;
+                }
+                checkWinner();
+            }
+
+           
+        </script>
+    </body>

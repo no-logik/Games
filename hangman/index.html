@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hangman Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600&family=Shizuru&display=swap');
+        </style> 
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .container-fluid{
+                width: 1350px;
+                height: 800px;
+                background-color: rgb(109, 214, 179);
+                margin: 40px auto;
+                margin-bottom: 0;
+                padding: 50px;
+            }
+            .container{
+                display: inline-block;
+                width: 600px;
+                height: 600px;
+            }
+            .box2{
+                float: right;
+                border: rgb(8, 250, 169) solid 3px;
+
+            }
+            h1{
+                text-align: center;
+                font-family: 'Roboto Slab', serif;
+            }
+            header{
+                height: 100px;
+            }
+            svg{
+                background-color: rgb(8, 250, 169);
+            }
+            .hidden{
+                display: none;
+            }
+            .levels{
+                height: 50%;
+                width: 100%;
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .level1{
+                flex-direction: column;
+            }
+            #desc{
+                width: 100%;
+                height: 40%;
+                font-family: 'Roboto Slab', serif;
+            }
+            #blankbox{
+                width: 100%;
+                height: 60%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Roboto Slab', serif;
+            }
+            #blank{
+                font-size: xx-large;
+                font-family: 'Roboto Slab', serif;
+            }
+            table{
+                width: 80%;
+                height: 90%;
+            }
+            td{
+                padding: 5px;
+                font-size: xx-large;
+                font-family: 'Shizuru', cursive;
+                text-align: center;
+                vertical-align: text-top;
+                border-radius: 15px;
+                cursor: pointer;
+                font-weight: bolder;
+            }
+            .cancelled{
+                background-color: #FF3131;
+            }
+            .checked{
+                background-color: #39ff14;
+            }
+            td:hover{
+                background-color: rgb(8, 250, 169);
+            }
+            .cancelled:hover{
+                background-color: #FF3131;
+            }
+            .checked:hover{
+                background-color: #39ff14;
+            }
+            span{
+                letter-spacing: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header><h1>HANGMAN GAME</h1></header>
+            <div class="container box1">
+                <svg height="600px" width="600px">
+                    <line x1="50" y1="500" x2="450" y2="500" style="stroke:#000;stroke-width:7;stroke-linecap:round" />
+                    <line x1="100" y1="500" x2="100" y2="100" style="stroke:#000;stroke-width:7;stroke-linecap:round" />
+                    <line x1="100" y1="100" x2="350" y2="100" style="stroke:#000;stroke-width:7;stroke-linecap:round" />
+                    <line x1="100" y1="200" x2="200" y2="100" style="stroke:#000;stroke-width:7;stroke-linecap:round" />
+                    <line x1="350" y1="100" x2="350" y2="175" style="stroke:#000;stroke-width:7;stroke-linecap:round" class="hangman-items" id="item-one" />
+                    <circle cx="350" cy="215" r="40" style="stroke:#000;stroke-width:7;fill:transparent" class="hangman-items" id="item-two"/>
+                    <line x1="350" y1="255" x2="350" y2="375" style="stroke:#000;stroke-width:7;stroke-linecap:round" class="hangman-items" id="item-three" />
+                    <line x1="350" y1="275" x2="275" y2="300" style="stroke:#000;stroke-width:7;stroke-linecap:round" class="hangman-items" id="item-four" />
+                    <line x1="350" y1="275" x2="425" y2="300" style="stroke:#000;stroke-width:7;stroke-linecap:round" class="hangman-items" id="item-five" />
+                    <line x1="350" y1="375" x2="300" y2="425" style="stroke:#000;stroke-width:7;stroke-linecap:round" class="hangman-items" id="item-six" />
+                    <line x1="350" y1="375" x2="400" y2="425" style="stroke:#000;stroke-width:7;stroke-linecap:round" class="hangman-items" id="item-seven" />
+                </svg>
+            </div>
+            <div class="container box2">
+                <div class="levels level1">
+                    <h1 id="desc">MOVIE</h1>
+                    <div class="blankbox">
+                        <span id="blank"></span>
+                    </div>
+                </div>
+                <div class="levels level2">
+                    <table>
+                        <tr>
+                            <td onclick="btn(event)">A</td>
+                            <td onclick="btn(event)">B</td>
+                            <td onclick="btn(event)">C</td>
+                            <td onclick="btn(event)">D</td>
+                            <td onclick="btn(event)">E</td>
+                            <td onclick="btn(event)">F</td>
+                            <td onclick="btn(event)">G</td>   
+                        </tr>
+                        <tr>
+                            <td onclick="btn(event)">H</td>
+                            <td onclick="btn(event)">I</td>
+                            <td onclick="btn(event)">J</td>
+                            <td onclick="btn(event)">K</td>
+                            <td onclick="btn(event)">L</td>
+                            <td onclick="btn(event)">M</td>
+                            <td onclick="btn(event)">N</td>
+                        </tr>
+                        <tr>
+                            
+                            <td onclick="btn(event)">O</td>
+                            <td onclick="btn(event)">P</td>
+                            <td onclick="btn(event)">Q</td>
+                            <td onclick="btn(event)">R</td>
+                            <td onclick="btn(event)">S</td>
+                            <td onclick="btn(event)">T</td>
+                            <td onclick="btn(event)">U</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td onclick="btn(event)">V</td>
+                            <td onclick="btn(event)">W</td>
+                            <td onclick="btn(event)">X</td>
+                            <td onclick="btn(event)">Y</td>
+                            <td onclick="btn(event)">Z</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <Script>
+            let obj;
+            let myPromise = new Promise(function(myResolve, myReject) {
+            // "Producing Code" (May take some time)
+            fetch('words.json')
+                .then(res => {
+                    // console.log(res)
+                    return res.json()})
+                .then(json => {myResolve(json);
+                console.log(json)});
+
+            myResolve(); // when successful
+            // myReject();  // when error
+            });
+
+            // "Consuming Code" (Must wait for a fulfilled Promise)
+            myPromise.then(
+           async function(value) { obj = value;
+              await console.log(obj); }
+            );
+            
+
+            
+            const objmovies = ["TERMINATOR", "MATRIX", "LOGAN","COCO","DUNKIRK","DUNE","JAWS","ZOOTOPIA","INCREDIBLES","UP","SHAZAM","MOANA","ALIENS","HAVEN","FEAR","GOODFELLAS","DEVIL","SEVEN","FROZEN","BRAVE","ALADDIN","LABYRINTH","SOLO","WILLOW","GRAVITY","SKYFALL","CINDERELLA","DIVERGENT","RATATOUILLE","SALT","BATMAN","SUPERMAN","AQUAMAN","IRONMAN","WONDERWOMAN","MADAGASCAR","PLATOON","CARS","SAW","WARLOCK","SHREK","HUSH","BOLT","CASINO","TWILIGHT"];
+
+            // const objmovies = obj.movies;
+
+        //    console.log(objmovies);
+            let blanks = document.getElementById('blank');
+
+            const outputWord = (array) => array[Math.trunc(45*Math.random())];
+            const word = outputWord(objmovies);
+            let letterArray = new Array();
+            let blankArray = new Array();
+            const hangmanParts = document.querySelectorAll('.hangman-items');
+            
+            function stringToArray (str) {
+                for(let i =0;i<str.length;i++)
+                    {
+                        letterArray.push(str.charAt(i));
+                        blankArray.push('_')
+                    }
+            }
+            stringToArray(word);
+            let blank = "";
+            function updateHTML (){
+                blank = "";
+                blankArray.forEach((elm) =>{
+                blank += elm;
+                });
+                blanks.innerHTML = blank;
+                if(!blankArray.includes("_")){
+                    alert('YOU WON BITCH!!');
+                    window.location.reload();
+                }
+            }
+
+            updateHTML();
+
+            function killHangman (){
+                let cancelledLetters = document.querySelectorAll('.cancelled');
+                hangmanParts[hangmanParts.length-cancelledLetters.length].classList.add('hidden');
+
+                if(cancelledLetters.length >= 7){
+                    alert(`Game Over Bitch! Movie was ${word}`);
+                    window.location.reload();
+                }
+            }
+
+            function btn (event) {
+                const btnPressed = event.target.innerHTML;
+                if(letterArray.includes(btnPressed)){
+                    letterArray.forEach((elm, index) =>{
+                        if(elm === btnPressed){
+                            blankArray.splice(index, 1, btnPressed);
+                        }
+                    })
+                    event.target.classList.add('checked');
+                    event.target.disabled = true;
+                    updateHTML();
+                }else{
+                    event.target.classList.add('cancelled');
+                    killHangman();
+                    event.target.disabled = true;
+                }
+            }
+            // let arrayForNames = "";
+            // fetch('127.0.0.1:8000/data', 'RequestInit')
+            // async function getText(file) {
+            // let myObject = await fetch('127.0.0.1:8000/data');
+            // let myText = await myObject.text();
+            // // document.getElementById("demo").innerHTML = myText;
+            // let arrayForNames = myText;
+            // console.log(arrayForNames);
+            // }
+            
+           
+        </Script>
+    </body>
+</html>

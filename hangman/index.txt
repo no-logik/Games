@@ -1,0 +1,24 @@
+1. select the word
+2. blanks ka array from the word
+3. uss blankarray ko display karna hai innerHTML  mein
+4. letter pr click karke uska letter check karna agar
+    match karra hai toh
+5. agar match karra hai toh replace karke blankarray
+    mein add kardo taaki live reload ho jaaye
+    match purey string ke liye hona chahiye
+
+////////////////////////////////////////////////////
+
+select the eord function
+
+function converts the word into an array + creates
+    blankarray corresponding to the word    
+
+blankarray se word banana jo innerHTML mein dikhega
+    yeh live reload hona chahiye. jab jab array 
+    change ho tab tab reload ho
+
+letter vaala function jo blankarray ke _ change karega
+    iss function se saare letters check hone chahiye
+
+hangman ke parts kaatne hain as the letters turn red
