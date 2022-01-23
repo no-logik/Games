@@ -73,8 +73,247 @@
       <div class="row">
         <div class="col hidden"></div>
         <div class="col board-piece">
-          <div id="pawn" class="piece pawns">
-            <svg id="pawn" height="100%" width="100%">
+          <div class="piece rooks black-rook">
+            <svg height="100%" width="100%">
+              <rect x="15" y="92" width="70px" height="6px" style="fill:#000;stroke:#fff;stroke-width:2;" />
+              <rect x="19.6" y="86" width="60.8px" height="6px" style="fill:#000;stroke:#fff;stroke-width:2;" />
+              <rect x="24" y="41" width="52px" height="39px" style="fill:#000;stroke:#fff;stroke-width:2;" />
+              <rect x="19.6" y="28" width="60.8px" height="6px" style="fill:#000;stroke:#fff;stroke-width:2;" />
+              <polygon points="20,34 80,34 76,41 24,41" fill="#000" stroke="#fff" stroke-width="2" />
+              <polygon points="24,80 76,80 80,86 20,86" fill="#000" stroke="#fff" stroke-width="2" />
+              <rect x="20" y="17.5" width="10" height="10" style="fill:#000;stroke-width:2;stroke:#fff;" />
+              <rect x="36" y="17.5" width="10" height="10" style="fill:#000;stroke-width:2;stroke:#fff;" />
+              <rect x="53" y="17.5" width="10" height="10" style="fill:#000;stroke-width:2;stroke:#fff;" />
+              <rect x="70" y="17.5" width="10" height="10" style="fill:#000;stroke-width:2;stroke:#fff;" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece knights black-knight">
+            <svg height="100%" width="100%">
+              <polygon
+                points="15,99 85,99 85,97.5 75,97.5 80,95 80,90 77.5,87.5 75,87.5 75,85 77.5,85 82.5,82.5 82.5,75 80,45 75,25 65,15 52.5,12.5 42.5,12.5 42.5,20 37.5,20 35,25 22.5,37.5 20,37.5 20,45 22.5,45 25,47.5 32.5,47.5 35,42.5 50,42.5 50,50 17.5,82.5 25,82.5 25,87.5 22.5,87.5 20,90 20,95 25,97.5 15,97.5 "
+                fill="#000" stroke="#fff" stroke-width="2" />
+              <line x1="25" y1="87.5" x2="75" y2="87.5" style="stroke: #fff; stroke-width:2;" stroke-dasharray="4" />
+              <circle cx="45" cy="25" r="2" stroke-width="2" fill="#000" stroke="#fff" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece bishops black-bishop">
+            <svg height="100%" width="100%">
+              <polygon
+                points="15,99 85,99 75,90 77.5,85 72.5,85 65,70 62.5,60 62.5,52.5 67.5,52.5 70,50 67.5,47.5 62.5,47.5 57.5,45 57.5,35 62.5,32.5 62.5,25 60,15 55,22.5 52.5,20 57.5,12.5 52.5,10 52.5,5 47.5,5 47.5,10 42.5,12.5 40,15 37.5,25 37.5,32.5 42.5,35 42.5,45 37.5,47.5 32.5,47.5 30,50 32.5,52.5 37.5,52.5 37.5,60 35,70 27.5,85 22.5,85 25,90"
+                fill="#000" stroke="#fff" stroke-width="2" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece kings black-king">
+            <svg height="100%" width="100%">
+              <polygon
+                points="15,99 85,99 80,95 85,90 85,87.5  82.5,82.5 75,75 70,65 62.5,52.5 67.5,52.5 67.5,47.5 62.5,47.5 62.5,42.5 65,37.5 70,35 72.5,30 72.5,25 67.5,25 67.5,27.5 62.5,30 60,30 55,27.5 57.5,25 55,25 52.5,27.5 52.5,20 57.5,20 60,22.5 60,15 57.5,17.5 52.5,17.5 52.5,12.5 55,10 45,10 47.5,12.5 47.5,17.5 42.5,17.5 40,15 40,22.5 42.5,20 47.5,20 47.5,27.5 45,25 42.5,25 45,27.5 40,30 37.5,30 32.5,27.5 32.5,25 27.5,25 27.5,30 30,35 35,37.5 37.5,42.5 37.5,47.5 32.5,47.5 32.5,52.5 37.5,52.5 30,65 25,75 17.5,82.5 15,87.5 15,92.5 20,95"
+                fill="#000" stroke="#fff" stroke-width="2" />
+              <line x1="20" y1="80" x2="80" y2="80" style="stroke: #fff; stroke-width:2;" stroke-dasharray="4" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece queens white-queen">
+            <svg height="100%" width="100%">
+              <polygon
+                points=" 15,99 20,95 15,92.5 15,85 17.5,80 22.5,75 20,75 17.5,72.5 20,70 25,70 30,62.5 35,57.5 37.5,50 40,45 40,40 32.5,40 30,37.5 32.5,35 40,35 37.5,27.5 32.5,20 27.5,15 27.5,10 32.5,10 35,15 42.5,15 45,12.5 40,7.5 40,2.5 60,2.5 60,7.5 55,12.5 57.5,15 65,15 67.5,10 72.5,10 72.5,15 67.5,20 62.5,27.5 60,35 67.5,35 70,37.5 67.5,40 60,40 62.5,50 65,57.5 70,62.5 75,70 80,70 82.5,72.5 80,75 77.5,75 82.5,80 85,85 85,95 80,95 85,99"
+                fill="#000" stroke="#fff" stroke-width=" 2" />
+              <line x1="15" y1="85" x2="85" y2="85" style="stroke: #fff; stroke-width:2;" stroke-dasharray="4" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece bishops black-bishop">
+            <svg height="100%" width="100%">
+              <polygon
+                points="15,99 85,99 75,90 77.5,85 72.5,85 65,70 62.5,60 62.5,52.5 67.5,52.5 70,50 67.5,47.5 62.5,47.5 57.5,45 57.5,35 62.5,32.5 62.5,25 60,15 55,22.5 52.5,20 57.5,12.5 52.5,10 52.5,5 47.5,5 47.5,10 42.5,12.5 40,15 37.5,25 37.5,32.5 42.5,35 42.5,45 37.5,47.5 32.5,47.5 30,50 32.5,52.5 37.5,52.5 37.5,60 35,70 27.5,85 22.5,85 25,90"
+                fill="#000" stroke="#fff" stroke-width="2" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece knights black-knight">
+            <svg height="100%" width="100%">
+              <polygon
+                points="15,99 85,99 85,97.5 75,97.5 80,95 80,90 77.5,87.5 75,87.5 75,85 77.5,85 82.5,82.5 82.5,75 80,45 75,25 65,15 52.5,12.5 42.5,12.5 42.5,20 37.5,20 35,25 22.5,37.5 20,37.5 20,45 22.5,45 25,47.5 32.5,47.5 35,42.5 50,42.5 50,50 17.5,82.5 25,82.5 25,87.5 22.5,87.5 20,90 20,95 25,97.5 15,97.5 "
+                fill="#000" stroke="#fff" stroke-width="2" />
+              <line x1="25" y1="87.5" x2="75" y2="87.5" style="stroke: #fff; stroke-width:2;" stroke-dasharray="4" />
+              <circle cx="45" cy="25" r="2" stroke-width="2" fill="#000" stroke="#fff" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece rooks black-rook">
+            <svg height="100%" width="100%">
+              <rect x="15" y="92" width="70px" height="6px" style="fill:#000;stroke:#fff;stroke-width:2;" />
+              <rect x="19.6" y="86" width="60.8px" height="6px" style="fill:#000;stroke:#fff;stroke-width:2;" />
+              <rect x="24" y="41" width="52px" height="39px" style="fill:#000;stroke:#fff;stroke-width:2;" />
+              <rect x="19.6" y="28" width="60.8px" height="6px" style="fill:#000;stroke:#fff;stroke-width:2;" />
+              <polygon points="20,34 80,34 76,41 24,41" fill="#000" stroke="#fff" stroke-width="2" />
+              <polygon points="24,80 76,80 80,86 20,86" fill="#000" stroke="#fff" stroke-width="2" />
+              <rect x="20" y="17.5" width="10" height="10" style="fill:#000;stroke-width:2;stroke:#fff;" />
+              <rect x="36" y="17.5" width="10" height="10" style="fill:#000;stroke-width:2;stroke:#fff;" />
+              <rect x="53" y="17.5" width="10" height="10" style="fill:#000;stroke-width:2;stroke:#fff;" />
+              <rect x="70" y="17.5" width="10" height="10" style="fill:#000;stroke-width:2;stroke:#fff;" />
+            </svg>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col hidden"></div>
+        <div class="col board-piece">
+          <div class="piece pawns black-pawn">
+            <svg height="100%" width="100%">
+              <circle cx="50" cy="35" r="10" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="60" r="18" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="37" r="8" stroke="none" stroke-width="0" fill="#000" />
+              <circle cx="50" cy="100" r="30" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="60" r="16" stroke="none" stroke-width="2" fill="#000" />
+              <line x1="20" y1="100" x2="80" y2="100" stroke-width="4" stroke="#fff" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece pawns black-pawn">
+            <svg height="100%" width="100%">
+              <circle cx="50" cy="35" r="10" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="60" r="18" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="37" r="8" stroke="none" stroke-width="0" fill="#000" />
+              <circle cx="50" cy="100" r="30" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="60" r="16" stroke="none" stroke-width="2" fill="#000" />
+              <line x1="20" y1="100" x2="80" y2="100" stroke-width="4" stroke="#fff" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece pawns black-pawn">
+            <svg height="100%" width="100%">
+              <circle cx="50" cy="35" r="10" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="60" r="18" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="37" r="8" stroke="none" stroke-width="0" fill="#000" />
+              <circle cx="50" cy="100" r="30" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="60" r="16" stroke="none" stroke-width="2" fill="#000" />
+              <line x1="20" y1="100" x2="80" y2="100" stroke-width="4" stroke="#fff" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece pawns black-pawn">
+            <svg height="100%" width="100%">
+              <circle cx="50" cy="35" r="10" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="60" r="18" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="37" r="8" stroke="none" stroke-width="0" fill="#000" />
+              <circle cx="50" cy="100" r="30" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="60" r="16" stroke="none" stroke-width="2" fill="#000" />
+              <line x1="20" y1="100" x2="80" y2="100" stroke-width="4" stroke="#fff" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece pawns black-pawn">
+            <svg height="100%" width="100%">
+              <circle cx="50" cy="35" r="10" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="60" r="18" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="37" r="8" stroke="none" stroke-width="0" fill="#000" />
+              <circle cx="50" cy="100" r="30" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="60" r="16" stroke="none" stroke-width="2" fill="#000" />
+              <line x1="20" y1="100" x2="80" y2="100" stroke-width="4" stroke="#fff" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece pawns black-pawn">
+            <svg height="100%" width="100%">
+              <circle cx="50" cy="35" r="10" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="60" r="18" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="37" r="8" stroke="none" stroke-width="0" fill="#000" />
+              <circle cx="50" cy="100" r="30" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="60" r="16" stroke="none" stroke-width="2" fill="#000" />
+              <line x1="20" y1="100" x2="80" y2="100" stroke-width="4" stroke="#fff" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece pawns black-pawn">
+            <svg height="100%" width="100%">
+              <circle cx="50" cy="35" r="10" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="60" r="18" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="37" r="8" stroke="none" stroke-width="0" fill="#000" />
+              <circle cx="50" cy="100" r="30" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="60" r="16" stroke="none" stroke-width="2" fill="#000" />
+              <line x1="20" y1="100" x2="80" y2="100" stroke-width="4" stroke="#fff" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece pawns black-pawn">
+            <svg height="100%" width="100%">
+              <circle cx="50" cy="35" r="10" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="60" r="18" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="37" r="8" stroke="none" stroke-width="0" fill="#000" />
+              <circle cx="50" cy="100" r="30" stroke="#fff" stroke-width="2" fill="#000" />
+              <circle cx="50" cy="60" r="16" stroke="none" stroke-width="2" fill="#000" />
+              <line x1="20" y1="100" x2="80" y2="100" stroke-width="4" stroke="#fff" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col hidden"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+      </div>
+      <div class="row">
+        <div class="col hidden"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+      </div>
+      <div class="row">
+        <div class="col hidden"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+      </div>
+      <div class="row">
+        <div class="col hidden"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+        <div class="col board-piece"></div>
+      </div>
+      <div class="row">
+        <div class="col hidden"></div>
+        <div class="col board-piece">
+          <div class="piece pawns white-pawn">
+            <svg height="100%" width="100%">
               <circle cx="50" cy="35" r="10" stroke="black" stroke-width="2" fill="#fff" />
               <circle cx="50" cy="60" r="18" stroke="black" stroke-width="2" fill="#fff" />
               <circle cx="50" cy="37" r="8" stroke="none" stroke-width="0" fill="#fff" />
@@ -85,7 +324,94 @@
           </div>
         </div>
         <div class="col board-piece">
-          <div id="rook" class="piece rooks">
+          <div class="piece pawns white-pawn">
+            <svg height="100%" width="100%">
+              <circle cx="50" cy="35" r="10" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="60" r="18" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="37" r="8" stroke="none" stroke-width="0" fill="#fff" />
+              <circle cx="50" cy="100" r="30" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="60" r="16" stroke="none" stroke-width="2" fill="#fff" />
+              <line x1="20" y1="100" x2="80" y2="100" stroke-width="4" stroke="black" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece pawns white-pawn">
+            <svg height="100%" width="100%">
+              <circle cx="50" cy="35" r="10" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="60" r="18" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="37" r="8" stroke="none" stroke-width="0" fill="#fff" />
+              <circle cx="50" cy="100" r="30" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="60" r="16" stroke="none" stroke-width="2" fill="#fff" />
+              <line x1="20" y1="100" x2="80" y2="100" stroke-width="4" stroke="black" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece pawns white-pawn">
+            <svg height="100%" width="100%">
+              <circle cx="50" cy="35" r="10" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="60" r="18" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="37" r="8" stroke="none" stroke-width="0" fill="#fff" />
+              <circle cx="50" cy="100" r="30" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="60" r="16" stroke="none" stroke-width="2" fill="#fff" />
+              <line x1="20" y1="100" x2="80" y2="100" stroke-width="4" stroke="black" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece pawns white-pawn">
+            <svg height="100%" width="100%">
+              <circle cx="50" cy="35" r="10" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="60" r="18" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="37" r="8" stroke="none" stroke-width="0" fill="#fff" />
+              <circle cx="50" cy="100" r="30" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="60" r="16" stroke="none" stroke-width="2" fill="#fff" />
+              <line x1="20" y1="100" x2="80" y2="100" stroke-width="4" stroke="black" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece pawns white-pawn">
+            <svg height="100%" width="100%">
+              <circle cx="50" cy="35" r="10" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="60" r="18" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="37" r="8" stroke="none" stroke-width="0" fill="#fff" />
+              <circle cx="50" cy="100" r="30" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="60" r="16" stroke="none" stroke-width="2" fill="#fff" />
+              <line x1="20" y1="100" x2="80" y2="100" stroke-width="4" stroke="black" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece pawns white-pawn">
+            <svg height="100%" width="100%">
+              <circle cx="50" cy="35" r="10" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="60" r="18" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="37" r="8" stroke="none" stroke-width="0" fill="#fff" />
+              <circle cx="50" cy="100" r="30" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="60" r="16" stroke="none" stroke-width="2" fill="#fff" />
+              <line x1="20" y1="100" x2="80" y2="100" stroke-width="4" stroke="black" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece pawns white-pawn">
+            <svg height="100%" width="100%">
+              <circle cx="50" cy="35" r="10" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="60" r="18" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="37" r="8" stroke="none" stroke-width="0" fill="#fff" />
+              <circle cx="50" cy="100" r="30" stroke="black" stroke-width="2" fill="#fff" />
+              <circle cx="50" cy="60" r="16" stroke="none" stroke-width="2" fill="#fff" />
+              <line x1="20" y1="100" x2="80" y2="100" stroke-width="4" stroke="black" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col hidden"></div>
+        <div class="col board-piece">
+          <div class="piece rooks white-rook">
             <svg height="100%" width="100%">
               <rect x="15" y="92" width="70px" height="6px" style="fill:#fff;stroke:#000;stroke-width:2;" />
               <rect x="19.6" y="86" width="60.8px" height="6px" style="fill:#fff;stroke:#000;stroke-width:2;" />
@@ -101,7 +427,67 @@
           </div>
         </div>
         <div class="col board-piece">
-          <div id="rook" class="piece rooks">
+          <div class="piece knights">
+            <svg height="100%" width="100%">
+              <polygon
+                points="15,99 85,99 85,97.5 75,97.5 80,95 80,90 77.5,87.5 75,87.5 75,85 77.5,85 82.5,82.5 82.5,75 80,45 75,25 65,15 52.5,12.5 42.5,12.5 42.5,20 37.5,20 35,25 22.5,37.5 20,37.5 20,45 22.5,45 25,47.5 32.5,47.5 35,42.5 50,42.5 50,50 17.5,82.5 25,82.5 25,87.5 22.5,87.5 20,90 20,95 25,97.5 15,97.5 "
+                fill="#fff" stroke="#000" stroke-width="2" />
+              <line x1="25" y1="87.5" x2="75" y2="87.5" style="stroke: #000; stroke-width:2;" stroke-dasharray="4" />
+              <circle cx="45" cy="25" r="2" stroke-width="2" fill="#fff" stroke="#000" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece bishops white-bishop">
+            <svg height="100%" width="100%">
+              <polygon
+                points="15,99 85,99 75,90 77.5,85 72.5,85 65,70 62.5,60 62.5,52.5 67.5,52.5 70,50 67.5,47.5 62.5,47.5 57.5,45 57.5,35 62.5,32.5 62.5,25 60,15 55,22.5 52.5,20 57.5,12.5 52.5,10 52.5,5 47.5,5 47.5,10 42.5,12.5 40,15 37.5,25 37.5,32.5 42.5,35 42.5,45 37.5,47.5 32.5,47.5 30,50 32.5,52.5 37.5,52.5 37.5,60 35,70 27.5,85 22.5,85 25,90"
+                fill="#fff" stroke="#000" stroke-width="2" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece queens white-queen">
+            <svg height="100%" width="100%">
+              <polygon
+                points=" 15,99 20,95 15,92.5 15,85 17.5,80 22.5,75 20,75 17.5,72.5 20,70 25,70 30,62.5 35,57.5 37.5,50 40,45 40,40 32.5,40 30,37.5 32.5,35 40,35 37.5,27.5 32.5,20 27.5,15 27.5,10 32.5,10 35,15 42.5,15 45,12.5 40,7.5 40,2.5 60,2.5 60,7.5 55,12.5 57.5,15 65,15 67.5,10 72.5,10 72.5,15 67.5,20 62.5,27.5 60,35 67.5,35 70,37.5 67.5,40 60,40 62.5,50 65,57.5 70,62.5 75,70 80,70 82.5,72.5 80,75 77.5,75 82.5,80 85,85 85,95 80,95 85,99"
+                fill="#fff" stroke="#000" stroke-width="2" />
+              <line x1="15" y1="85" x2="85" y2="85" style="stroke: #000; stroke-width:2;" stroke-dasharray="4" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece kings white-king">
+            <svg height="100%" width="100%">
+              <polygon
+                points="15,99 85,99 80,95 85,90 85,87.5  82.5,82.5 75,75 70,65 62.5,52.5 67.5,52.5 67.5,47.5 62.5,47.5 62.5,42.5 65,37.5 70,35 72.5,30 72.5,25 67.5,25 67.5,27.5 62.5,30 60,30 55,27.5 57.5,25 55,25 52.5,27.5 52.5,20 57.5,20 60,22.5 60,15 57.5,17.5 52.5,17.5 52.5,12.5 55,10 45,10 47.5,12.5 47.5,17.5 42.5,17.5 40,15 40,22.5 42.5,20 47.5,20 47.5,27.5 45,25 42.5,25 45,27.5 40,30 37.5,30 32.5,27.5 32.5,25 27.5,25 27.5,30 30,35 35,37.5 37.5,42.5 37.5,47.5 32.5,47.5 32.5,52.5 37.5,52.5 30,65 25,75 17.5,82.5 15,87.5 15,92.5 20,95"
+                fill="#fff" stroke="#000" stroke-width="2" />
+              <line x1="20" y1="80" x2="80" y2="80" style="stroke: #000; stroke-width:2;" stroke-dasharray="4" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece bishops white-bishop">
+            <svg height="100%" width="100%">
+              <polygon
+                points="15,99 85,99 75,90 77.5,85 72.5,85 65,70 62.5,60 62.5,52.5 67.5,52.5 70,50 67.5,47.5 62.5,47.5 57.5,45 57.5,35 62.5,32.5 62.5,25 60,15 55,22.5 52.5,20 57.5,12.5 52.5,10 52.5,5 47.5,5 47.5,10 42.5,12.5 40,15 37.5,25 37.5,32.5 42.5,35 42.5,45 37.5,47.5 32.5,47.5 30,50 32.5,52.5 37.5,52.5 37.5,60 35,70 27.5,85 22.5,85 25,90"
+                fill="#fff" stroke="#000" stroke-width="2" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece knights">
+            <svg height="100%" width="100%">
+              <polygon
+                points="15,99 85,99 85,97.5 75,97.5 80,95 80,90 77.5,87.5 75,87.5 75,85 77.5,85 82.5,82.5 82.5,75 80,45 75,25 65,15 52.5,12.5 42.5,12.5 42.5,20 37.5,20 35,25 22.5,37.5 20,37.5 20,45 22.5,45 25,47.5 32.5,47.5 35,42.5 50,42.5 50,50 17.5,82.5 25,82.5 25,87.5 22.5,87.5 20,90 20,95 25,97.5 15,97.5 "
+                fill="#fff" stroke="#000" stroke-width="2" />
+              <line x1="25" y1="87.5" x2="75" y2="87.5" style="stroke: #000; stroke-width:2;" stroke-dasharray="4" />
+              <circle cx="45" cy="25" r="2" stroke-width="2" fill="#fff" stroke="#000" />
+            </svg>
+          </div>
+        </div>
+        <div class="col board-piece">
+          <div class="piece rooks white-rook">
             <svg height="100%" width="100%">
               <rect x="15" y="92" width="70px" height="6px" style="fill:#fff;stroke:#000;stroke-width:2;" />
               <rect x="19.6" y="86" width="60.8px" height="6px" style="fill:#fff;stroke:#000;stroke-width:2;" />
@@ -116,89 +502,6 @@
             </svg>
           </div>
         </div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-
-      </div>
-      <div class="row">
-        <div class="col hidden"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-      </div>
-      <div class="row">
-        <div class="col hidden"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-      </div>
-      <div class="row">
-        <div class="col hidden"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-      </div>
-      <div class="row">
-        <div class="col hidden"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-      </div>
-      <div class="row">
-        <div class="col hidden"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-      </div>
-      <div class="row">
-        <div class="col hidden"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-      </div>
-      <div class="row">
-        <div class="col hidden"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
-        <div class="col board-piece"></div>
       </div>
       <div class="row hidden">
         <div class="col hidden"></div>
